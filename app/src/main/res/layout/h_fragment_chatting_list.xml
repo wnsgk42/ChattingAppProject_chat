@@ -6,14 +6,14 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/h_LinearLayoutChattingList_Top"
+        android:id="@+id/hLinearLayoutChattingListTop"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/h_RecyclerViewChattingList"
+        app:layout_constraintBottom_toTopOf="@+id/hRecyclerViewChattingList"
         >
 
         <TextView
@@ -23,9 +23,11 @@
             android:textSize="30sp"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
             />
 
         <Button
+            android:id="@+id/hButtonSearchChattingList"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@mipmap/ic_launcher"
@@ -35,6 +37,7 @@
             />
 
         <Button
+            android:id="@+id/hButtonNewChatting"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@mipmap/ic_launcher"
@@ -42,6 +45,7 @@
             android:layout_margin="8dp"
             />
         <Button
+            android:id="@+id/hButtonProfileMusic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@mipmap/ic_launcher"
@@ -49,6 +53,7 @@
             android:layout_margin="8dp"
             />
         <Button
+            android:id="@+id/hButtonChattingListSet"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@mipmap/ic_launcher"
@@ -59,12 +64,12 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/h_RecyclerViewChattingList"
+        android:id="@+id/hRecyclerViewChattingList"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/h_LinearLayoutChattingList_Top"
+        app:layout_constraintTop_toBottomOf="@+id/hLinearLayoutChattingListTop"
         app:layout_constraintBottom_toBottmOf="parent"
         />
 
