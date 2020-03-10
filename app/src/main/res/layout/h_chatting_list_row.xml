@@ -28,16 +28,20 @@
                 >
                 <LinearLayout
                     android:layout_width="230dp"
-                    android:layout_height="30dp"
+                    android:layout_height="25dp"
                     android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
                     >
                     <TextView
                         android:id="@+id/hChattingListRoomName"
                         android:layout_width="wrap_content"
+                        android:maxWidth="150dp"
                         android:layout_height="match_parent"
                         android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
+                        android:layout_marginTop="2dp"
                         android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
                         />
                     <TextView
                         android:id="@+id/hChattingListRoomNumber"
@@ -45,6 +49,7 @@
                         android:layout_height="match_parent"
                         android:textColor="@android:color/darker_gray"
                         android:textSize="20sp"
+                        android:layout_marginLeft="3dp"
                         />
                     <ImageView
                         android:id="@+id/hChattingListRoomAlarm"
@@ -58,10 +63,13 @@
                 <TextView
                     android:id="@+id/hChattingListChat"
                     android:layout_width="230dp"
-                    android:layout_height="50dp"
-                    android:textSize="18sp"
+                    android:layout_height="45dp"
+                    android:textSize="15sp"
                     android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
                     />
 
             </LinearLayout>
@@ -79,6 +87,5 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
 
 </LinearLayout>
