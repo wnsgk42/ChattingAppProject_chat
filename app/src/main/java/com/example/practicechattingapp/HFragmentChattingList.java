@@ -16,6 +16,8 @@ import java.util.ArrayList;
 public class HFragmentChattingList extends Fragment {
 
     private RecyclerView hRecyclerViewChattingList; //채팅목록 recyclerview 참조 변수
+    private RecyclerView.LayoutManager hmLayoutManager;
+    private
 
     @Nullable
     @Override
@@ -28,3 +30,4 @@ public class HFragmentChattingList extends Fragment {
         return rootview;
     }
 }
+
