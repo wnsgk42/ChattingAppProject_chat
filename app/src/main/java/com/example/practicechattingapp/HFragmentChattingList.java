@@ -16,8 +16,9 @@ import java.util.ArrayList;
 public class HFragmentChattingList extends Fragment {
 
     private RecyclerView hRecyclerViewChattingList; //채팅목록 recyclerview 참조 변수
-    private RecyclerView.LayoutManager hmLayoutManager;
-    private
+    private RecyclerView.LayoutManager hCLLayoutManager;
+    private RecyclerView.Adapter hCLAdapter;
+    private ArrayList<HChattingListData> hCLFDataset;
 
     @Nullable
     @Override
@@ -26,6 +27,12 @@ public class HFragmentChattingList extends Fragment {
         hRecyclerViewChattingList = rootview.findViewById(R.id.hRecyclerViewChattingList);
 
         hRecyclerViewChattingList.setHasFixedSize(true);
+
+        hCLFDataset = new ArrayList<>();
+        hCLFDataset.add(new HChattingListData());
+
+        hCLAdapter = new HChattingListAdapter(hCLFDataset);
+        hRecyclerViewChattingList.setAdapter(hCLAdapter);
 
         return rootview;
     }
