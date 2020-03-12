@@ -34,7 +34,6 @@ public class HChattingListAdapter extends RecyclerView.Adapter<HChattingListAdap
     }
 
 
-    // Create new views (invoked by the layout manager)
     @Override
     public HChattingListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         hCLDataset = new ArrayList<>();
@@ -47,22 +46,20 @@ public class HChattingListAdapter extends RecyclerView.Adapter<HChattingListAdap
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
         HChattingListData hCL = hCLADataset.get(position);
         holder.hChattingListChat.setText(hCL.gethLastChat());
         holder.hChattingListRoomName.setText(hCL.gethRoomName());
-        // holder.ImageView_friendprofile.setImage(friend.getImage());
+        holder.hChattingRomeProfile.setImageBitmap(hCL.gethRoomProfileImageBitmap());
     }
 
     @Override
     public int getItemCount() {
-        return mDataset != null ? mDataset.size():0 ;
+        return hCLADataset != null ? hCLADataset.size():0 ;
     }
 
-    public void addChat(HChattingListData friendData){
-        mDataset.add(friendData);
-        notifyItemInserted(mDataset.size()-1); //데이터 추가
+    public void addChat(HChattingListData hCLData){
+        hCLADataset.add(hCLData);
+        notifyItemInserted(hCLADataset.size()-1); //데이터 추가
     }
 
 }
