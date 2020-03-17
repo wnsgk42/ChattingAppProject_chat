@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class HFragmentChattingList extends Fragment {
 
     private RecyclerView hRecyclerViewChattingList; //채팅목록 recyclerview 참조 변수
-    private RecyclerView.LayoutManager hCLLayoutManager;//recyclerview 매니저 참조변수
+    private RecyclerView.LayoutManager hCLLayoutManager;//linearlayout 매니저 참조변수
     private RecyclerView.Adapter hCLAdapter; //adpater 참조변수
     private ArrayList<HChattingListData> hCLFDataset; //채팅방 데이터
 
