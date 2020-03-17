@@ -5,7 +5,8 @@ import android.graphics.Bitmap;
 public class HChattingListData {
     private String hRoomName; //채팅방 이름 받는 변수
     private String hLastChat; //마지막 채팅 내용 받는 변수
-    private Bitmap hRoomProfileImageBitmap;//채팅방 프로필 이미지의 비트맵을 받는 변수
+   // private Bitmap hRoomProfileImageBitmap;//채팅방 프로필 이미지의 비트맵을 받는 변수
+    private String hRoomProfileimageString;//
 
     public String gethRoomName() { return hRoomName; }
 
@@ -21,13 +22,11 @@ public class HChattingListData {
         this.hLastChat = hLastChat;
     }
 
-    public Bitmap gethRoomProfileImageBitmap() {
-        return hRoomProfileImageBitmap;
+    public String gethRoomProfileimageString() {
+        return hRoomProfileimageString;
     }
 
-    public void sethRoomProfileImageBitmap(Bitmap hRoomProfileImageBitmap) {
-        this.hRoomProfileImageBitmap = hRoomProfileImageBitmap;
+    public void sethRoomProfileimageString(String hRoomProfileimageString) {
+        this.hRoomProfileimageString = hRoomProfileimageString;
     }
-
-
 }

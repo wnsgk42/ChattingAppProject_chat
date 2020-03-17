@@ -49,7 +49,10 @@ public class HChattingListAdapter extends RecyclerView.Adapter<HChattingListAdap
         HChattingListData hCL = hCLADataset.get(position);
         holder.hChattingListChat.setText(hCL.gethLastChat());
         holder.hChattingListRoomName.setText(hCL.gethRoomName());
-        holder.hChattingRomeProfile.setImageBitmap(hCL.gethRoomProfileImageBitmap());
+
+        String himageString = hCL.gethRoomProfileimageString();// 채팅방 프로필 이미지의 string 정보를 받음
+        HBitmapTool hBT = new HBitmapTool();//string을 bitmap으로 전환하기 위한 참조변수 선언
+        holder.hChattingRomeProfile.setImageBitmap(hBT.hStringToBitmap(himageString));//bitmap 변환 후 image 세팅
     }
 
     @Override
