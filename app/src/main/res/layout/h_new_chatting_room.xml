@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/hLinearLayoutNewChattingRoom_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/hRecyclerViewNCRSelectedList"
+    >
+        <Button
+            android:id="@+id/hButtonNCRBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/ic_launcher"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대화상대 초대"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="63dp"
+            android:textColor="#ffcc66"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/hNewChattingRoomOK"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="확인"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:background="null"
+            />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hRecyclerViewNCRSelectedList"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hLinearLayoutNewChattingRoom_1"
+        app:layout_constraintBottom_toTopOf="@+id/hNCTextViewRFriendList"
+        />
+    <TextView
+        android:id="@+id/hNCTextViewRFriendList"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="친구"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hRecyclerViewNCRSelectedList"
+        app:layout_constraintBottom_toTopOf=""
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
