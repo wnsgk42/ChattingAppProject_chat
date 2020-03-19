@@ -59,8 +59,34 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hLinearLayoutNewChattingRoom_1"
+        app:layout_constraintBottom_toTopOf="@+id/hNCREditTextSearch"
+        />
+
+    <EditText
+        android:id="@+id/hNCREditTextSearch"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        android:background="@drawable/h_edittext_background_1"
+        android:hint="이름 검색"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hRecyclerViewNCRSelectedList"
+        app:layout_constraintBottom_toTopOf="@+id/hNCRLine1"
+        />
+
+    <View
+        android:id="@+id/hNCRLine1"
+        android:layout_width="390dp"
+        android:layout_height="0.8dp"
+        android:background="#666666"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hNCREditTextSearch"
         app:layout_constraintBottom_toTopOf="@+id/hNCTextViewRFriendList"
         />
+
     <TextView
         android:id="@+id/hNCTextViewRFriendList"
         android:layout_width="match_parent"
@@ -68,14 +94,23 @@
         android:text="친구"
         android:gravity="center_vertical"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:textColor="#666666"
         android:textSize="15sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hRecyclerViewNCRSelectedList"
-        app:layout_constraintBottom_toTopOf=""
+        app:layout_constraintBottom_toTopOf="@+id/hRecyclerViewNCRFriendList"
         />
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hRecyclerViewNCRFriendList"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hNCTextViewRFriendList"
+        app:layout_constraintBottom_toBottomOf="Parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
